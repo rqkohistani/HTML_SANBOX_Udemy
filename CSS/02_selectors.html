@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>selectors</title>
+  <style>
+    /* element == tag or element selectors or body styling  */
+    body{
+      background-color: gray;
+    }
+    
+    /* . for classes */
+    .primary-heading{
+      color: blue;
+    }
+    /* # is for IDs */
+    #welcome{
+      background-color: #f4f4f4;
+    }
+   
+    #about{
+      color: whit;
+    }
+    /* Nested selectors */
+    /* targeting welcome's p tag or the paragraph */
+    #welcome p{
+      font-size: 20px;
+    }
+    /* Multiple selectors */
+    #welcome, #about{
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+  <h2 class="primary-heading">Welcome</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero enim tempora quo veritatis facilis inventore quae hic commodi officia voluptas!
+  </p>
+</div>
+<div id="about">
+  <h2>about</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat pariatur praesentium ullam excepturi maxime veniam laudantium libero error quidem eos.
+  </p>
+</div>
+</body>
+</html>

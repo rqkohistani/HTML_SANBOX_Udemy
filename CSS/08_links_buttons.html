@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>links and buttons</title>
+  <style>
+    a{
+      /* by default the link will be show blue */
+      color: #333333;
+      /* the defaul is underline we setting by none
+                  text decoration will remove the underline */
+                  text-decoration: none;
+
+                }
+                a:hover{
+                  /* changes the color of the link when you hover */
+                  color: green;
+                  /* font-size: 40px; */
+                  /* text-decoration: underline; */
+                }
+                /* a:visited{
+                  color: red;
+                  
+                } */
+                a:active{
+                  color: black;
+                }
+            /* button styling */
+            .btn{
+              background: #4c6ca0;
+              color: #ffffff;
+              font-size: 16px;
+              padding:10px 20px;
+              border-radius: 5px;
+              border: 2px #4c6ca0 solid;
+              /* to have mouse a corsor in botton then use */
+              cursor: pointer;
+              /* text-decoration: underline; */
+              
+            }
+            .btn:hover{
+              color: #f4f4f4;
+              background: #446190;
+              
+            }
+              </style>
+            </head>
+            <body>
+              <br>
+              <a href="#">My link</a>
+              <br><br>
+              <a class="btn" href="#">My link </a>
+              <br><br>
+              <button class="btn">My button</button>
+            </body>
+            </html>

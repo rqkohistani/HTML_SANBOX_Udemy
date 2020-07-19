@@ -1,0 +1,4 @@
+Alt+shift+the arrow keys will copy the entire line
+Ctrl+right or left arrow go by words
+Alt+win+arrow keys moves the current line up and down
+Crtl+D select multi words to be renamed

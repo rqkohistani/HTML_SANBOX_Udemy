@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu styling</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* side menu */
+    .side-menu{
+     /* to make auto center per screen size */
+       /* margin: 20px auto; */
+      /* takes out the bullets */
+      list-style: none;
+      border:1px #ddd solid;
+      border-radius: 10px;
+      max-width: 300px;
+      /* by default the ul have padding we need to set ourselves */
+      padding: 20px;
+      
+    }
+    /* list of items */
+    .side-menu li{
+      font-size: 18px;
+      line-height: 2.4em;
+      border-bottom: dotted 1px #ddd;
+        
+      }
+      /* pseudo selector called last child to target the last list item  */
+      .side-menu li:last-child{
+        border: none;
+      }
+      .side-menu li a{
+        color: #333333;
+        text-decoration: none;
+        
+      }
+      .side-menu li a:hover{
+        color: coral ;
+      }
+      /* Navbar styling */
+      .navbar{
+        
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: #4c6ca0;
+        
+        border-radius: 5px;
+        /* 2 since float: left i used  */
+        overflow: auto;
+        
+        
+
+      }
+      /* floating all of the list item to the left */
+      .navbar li{
+        
+        float: left;
+        /* it happnened that they float to the left but the background
+            is now gone since we float. it collapse the background
+            so we can fix this go to the navbar the parent element and 
+            we overflow and set it auto */
+            
+      }
+      .navbar li a{
+        display:block;
+        color: #ffffff;
+        text-decoration: none; 
+        padding: 15px 20px;
+        
+        
+
+      }
+      .navbar li a:hover{
+        background: #446190;
+        color: #f4f4f4;
+      }
+  </style>
+</head>
+<body>
+  <ul class="navbar"> 
+    
+    <li> <a href="#">Home</a></li>
+    <li> <a href="#">About</a></li>
+      <li> <a href="#">Services</a></li>
+        <li> <a href="#">Contact</a></li>
+    
+  </ul>
+  <br><br><br>
+  <ul class="side-menu"> 
+    
+    <li> <a href="#">Home</a></li>
+    <li> <a href="#">About</a></li>
+      <li> <a href="#">Services</a></li>
+        <li> <a href="#">Contact</a></li>
+    
+  </ul>
+</body>
+</html>

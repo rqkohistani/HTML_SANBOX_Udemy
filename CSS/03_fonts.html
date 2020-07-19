@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Fonts</title>
+  <style>
+  
+    body{
+      /* 16 is the default font size */
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      /* line-height is the up and down space */
+      /* 1em =16px */
+      /* 1rem =16px */
+      line-height: 1.6em;
+    }
+    /* targeting span in welcome */
+    #welcome p span{
+      font-weight: bold;
+    }
+    #about p span{
+      font-size: 10;
+      font-style: italic;
+      color: gray;
+      border: green;
+      background-color: greenyellow;
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="welcome">
+  <h2 class="primary-heading">Welcome</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur
+     adipisicing elit. <span> enim tempora quo veritatis 
+     facilis inventore quae </span>hic commodi officia voluptas!
+  </p>
+</div>
+<div id="about">
+  <h2>about</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing
+     elit. <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, harum. </span>hic error quidem eos.
+  </p>
+</div>
+</body>
+</html>
