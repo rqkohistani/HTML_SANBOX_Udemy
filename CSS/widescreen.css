@@ -1,0 +1,12 @@
+body{
+  background: black;
+ 
+    /* targetting the widecreen less than 1201 px */
+    /* as a separate files */
+   
+  
+}
+
+  #widescreen h1{
+    display: block;
+  }

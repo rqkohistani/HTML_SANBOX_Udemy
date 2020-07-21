@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <title>Media Queries</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: gray;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+    /* hidding all h1 values */
+    h1{
+      display: none;
+    }
+    /* embed the media queries into a style sheed */
+
+  /* mostly we have in a separate files Ex. mobile.css */
+
+    /* Smartphones */
+    @media(max-width: 500px){
+      body{
+        background: red;
+
+      }
+      /* targetting the smartphones less than 500 px */
+      #smartphone h1{
+        display: block;
+      }
+    }
+
+    /* Tablet */
+    /* For the tablet we need to have min and max
+        because we need keep in the exact pixel
+          something different for tablets and smartphone */
+    @media(min-width: 501px) and (max-width: 768px){
+      body{
+        background: blue;
+
+      }
+      #tablet h1{
+        display: block;
+      }
+    }
+     /* Tablet */
+    @media(min-width: 769px) and (max-width: 1200px){
+      body{
+        background: green;
+
+      }
+      #normal h1{
+        display: block;
+      }
+    }
+     /* widescreen */
+     /* we dont a range for this since this is the widescreen */
+     /* check out the widescreen.css file */
+       /* landscape */
+       /* for landscape we need set height */
+       /* whatever for width still applies */
+  
+     @media(max-height:500px){
+      body{
+        background: orange;
+
+      }
+      #landscape h1{
+        display: block;
+      }
+    }
+
+  </style>
+  <!-- it is only going to load if the screen is 1201px or more  -->
+  <link rel="stylesheet" media="screen and (min-width:1201px" href="widescreen.css">
+</head>
+<body>
+  <!-- we dont need to have separate styles for every single device
+    we will use floats on normal or flex in the grid system  -->
+  <div id="widescreen"><h1>Widescreen</h1></div>
+  <div id="normal"><h1>Normal</h1></div>
+  <div id="tablet"><h1>Tablet</h1></div>
+  <div id="smartphone"><h1>Smartphone</h1></div>
+  <div id="landscape"><h1>Landscape</h1></div>
+</body>
+</html>
