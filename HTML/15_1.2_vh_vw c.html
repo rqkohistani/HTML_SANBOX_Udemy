@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>view port height and view port Units "vh & vw</title>
+  <style>
+    /* CHECK 15_vh_vw.html FIRST AND COME BACK HERE */
+    /* IF YOU  */
+    /* Targetting everything reseting */
+    *{
+      /* why using box-sizing check the link below */
+      /* because the contents will be added on the default box-sizing 
+          therefore, you see the contect much larger then what you set
+            after reseting then you get you what you set.  */
+      /* https://www.w3schools.com/css/css3_box-sizing.asp */
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+    header{
+      /* we can both use color and an image if image is not available then the
+      color will be applied */
+      /* url('https://source.unsplash.com/random') random pictures */
+      background: #333333 url(https://source.unsplash.com/WLUHO9A_xik/1600x900) 
+      no-repeat center center/cover;
+      color: white;
+      text-decoration: none;
+      /* What I want is the header background to take up
+        the entire screen and you might think  to use 
+        height:100% it will work but if you content for it*/
+        /* this is where view port heights come in  */
+        /* height: 100%; */
+        height: 100vh;
+        /* Regardless of how big or small the browser is 
+        it can make it bigger or smaller.
+        Now if I change this to 50 viewport heights and save it takes up 
+        exactly half  */
+        /* height: 50vh; */
+        /* Vh & vw make creating landing pages very easy like a whole big 
+        image with some text and a button */
+        /* padding in all sides */
+        padding:2rem;
+        /* 2x16px which the default size of html 2x16=32px */
+        padding-top: 15rem;
+        /* 15x16=240px */
+
+        text-align: center;
+    }
+    header h1{
+      font-size: 3rem;
+      /* font-size: 48px; */
+      /* 3x16=48px */
+    }
+    header p{
+      line-height: 1rem;
+      margin: 1rem 0;
+    }
+    .btn{
+      /* by default links are inline */
+      display: inline-block;
+      text-decoration: none;
+      background: #f4f4f4 ;
+      color: #333333;
+      padding: 0.75rem 2rem;
+      border-radius: 5px;
+          }
+          section{
+        padding:2rem;
+      }
+      @media(max-height:450px ){
+        /* so when the height is less than 450px
+        then the below styling will kick in */
+        header{
+          padding-top: 5rem;
+        }
+      }
+
+  </style>
+</head>
+
+<!-- They all represent a percentage of the browser (viewport) dimensions and scale accordingly on window resize -->
+<!-- vw	Relative to 1% of the width of the viewport* -->
+<!-- 	Relative to 1% of the height of the viewport* -->
+<!-- No matter how big or small the browser is. You make it tiny you could
+   stretch it across your whole screen there's always one hundred of viewport -->
+<body>
+  <header>
+    <h1>Welcome To Our Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi qui quibusdam optio aliquid ullam quo.</p>
+    <!-- a.btn creates a tag and btn class-->
+    <a href="#" class="btn">Find Out More</a>
+    
+  </header>
+  <section>
+    <h3>About us</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis eos odio natus laborum omnis soluta ex? Dolorem voluptates ipsum ullam optio animi, reprehenderit quibusdam. Beatae dolor officiis iusto neque cum, nihil, omnis consequatur repellendus nobis quis aliquam accusantium totam repudiandae ipsam repellat. Distinctio impedit non doloremque, magni minima alias.</p>
+  </section>
+</body>
+</html>
