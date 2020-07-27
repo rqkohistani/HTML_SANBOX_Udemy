@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Basics</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .flex-container{
+      /* step 1 */
+      display: flex;
+            /* automatically we have certain alignment properties */
+      /* by default flex-direction  is row alignment "which goes horizintal" */
+      /* step  3*/
+      flex-direction: row;
+      /* flex-direction: row-reverse; */
+      /* in the row item 1 item 2 ... as row are the main axis vertically is cross axis */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+            /* so now they are stacked on each other top of each other now it is the opposite of the row axis */
+
+        /* wrap */
+        /* by default is nowrap when you try to smaller the screen then at some point 
+        it wont shrink more  */
+        /* flex-wrap: wrap; */
+    }
+
+    /* step 2 */
+    .item {
+      background:#f4f4f4 ;
+      border:#ccc solid 2px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      width: 200px;
+
+      /* step  5*/
+      /* width:200px we see that the item stay in particular size will not cover the entire page */
+      /* to keep simple then use flex 1 0 2 all at once value
+      flex:1 means grow 1 0 shrink 0 basis 200px will the as above */
+      flex: 1 0 200px;
+      /* most the time we will se flex:1: */
+      /* flex-shrink:0; will keep every in its defaults size when changing the screen */
+      /* flex-shrink: 0; */
+
+      /* Most probably we use flex-grow:1  */
+      /* flex-grow: 1; */
+
+
+    }
+
+    /* step  4*/
+    /* targeting each item */
+    .item-1{
+      /* flex-shrink: 0; meant not to shrink keep in its default size. */
+      flex-shrink: 0;
+    }
+    .item-2{
+      /* flex-grow: 1; will grow from its default size when change screen size */
+      flex-grow: 1;
+      /* since item 2 is should be smaller than item in all time regardsless of screen size then we use  */
+      /* flex-basis: 0; */
+      flex-basis: 0;
+    }
+    .item-3{
+      /* item 3 twoice bigger than item 2 */
+      flex-grow: 2;
+      flex-basis: 0;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item item-1">
+      <h3>Item 1</h3>
+    </div>
+    <div class="item item-2">
+      <h3>Item 2</h3>
+    </div>
+    <div class="item item-3">
+      
+      <h3>Item 3</h3>
+    </div>
+    <!-- <div class="item item-4">
+      <h3>Item 4</h3>
+    </div>
+    <div class="item item-5">
+      <h3>Item 5</h3>
+    </div> -->
+  </div>
+</body>
+</html>
