@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before & After</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #333333;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      /* background: url('https://source.unsplash.com/1600x900/?nature.water') no-repeat center center/cover; */
+      /* adding transparent to the image */
+      /* opacity: 0.4; */
+      /* we need to bring text before the image */
+    }
+
+    header::before {
+      /* when using before and after we need use content */
+      /* even though we are not inserting any content to the page
+      we leave it blank */
+      content: '';
+      background: url('https://source.unsplash.com/1600x900/?nature.water') no-repeat center center/cover;
+      /* adding transparent to the image */
+      opacity: 0.4;
+      /* we need to bring text before the image */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header h1 {
+      /* header > h1 can work too */
+      font-size: 4rem;
+      margin: 1rem;
+    }
+
+    .is-required::after {
+      content: '*';
+      /* content: 'can be written text as well'; */
+      color: red;
+      padding-left: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <label class="is-required" for="name">Name</label>
+  <input type="text">
+
+
+  <header>
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, possimus doloribus odit eaque corrupti
+      atque dolorum obcaecati. Sequi, distinctio aspernatur!</p>
+
+  </header>
+  <section>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio assumenda molestiae alias iusto et nisi
+      debitis cum libero similique? Maxime, ipsum vel. Iusto fugit rem illum voluptates impedit, maiores id error iste
+      temporibus modi, facere, omnis deserunt optio sunt placeat aperiam accusamus tempore reprehenderit aliquam?
+      Consequuntur voluptatibus quam laboriosam.</p>
+  </section>
+</body>
+
+</html>
